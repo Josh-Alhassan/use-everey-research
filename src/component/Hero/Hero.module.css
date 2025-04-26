@@ -1,0 +1,323 @@
+.heroSection {
+  padding: 20px;
+}
+
+.heroDescribe {
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heroTitle {
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--primaryColor);
+  margin-bottom: 16px;
+  line-height: 38.4px;
+}
+
+.heroText {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  line-height: 28px;
+}
+
+.heroSignUp {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  padding: 8px 44px;
+  border-radius: 10px;
+  background-color: var(--primaryColor);
+
+  cursor: pointer;
+
+  display: inline-block;
+  margin-bottom: 32px;
+}
+
+.heroMetrics {
+  display: flex;
+  justify-content: center;
+}
+
+.metricsBlock {
+  text-align: justify;
+}
+
+.metricsBlock:not(:last-child) {
+  border-right: 1px solid var(--secondaryGrey);
+  padding-right: 29px;
+}
+
+.metricsBlock:not(:first-child) {
+  padding-left: 29px;
+}
+
+.metricNumbers {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--secondaryGrey);
+}
+
+.metricLabel {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--secondaryGrey);
+}
+
+.heroImgContainer {
+  height: 400px;
+}
+
+.heroImageDiv {
+  height: auto;
+  background-color: var(--secondaryBackground);
+
+  position: relative;
+  bottom: -83px;
+  z-index: -1;
+}
+
+.heroImg {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+
+  z-index: 1;
+}
+
+.heroImgCaption {
+  margin-top: -100px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 13px;
+  color: #000;
+  padding: 10px;
+
+  position: relative;
+  border-radius: 6px;
+
+  background: rgba(231, 244, 238, 0.7);
+
+  z-index: 10;
+}
+
+/* #################### */
+/* OUT OF FLOW ELEMENTS */
+/* #################### */
+
+.outOfFlow {
+  position: relative;
+}
+
+.outOfFlowResearch,
+.outOfFlowPublication {
+  color: var(--alt-text);
+  padding: 12px 24px;
+  border-radius: 5px;
+  width: fit-content;
+  font-size: 11px;
+  font-weight: 600;
+
+  position: absolute;
+}
+
+.outOfFlowResearch {
+  background-color: var(--tertiary-background);
+  color: rgba(43, 43, 61, 1);
+
+  top: -120px;
+  right: 0px;
+}
+
+.outOfFlowPublication {
+  background: var(--dark-background);
+  color: #ffffff;
+
+  top: -20px;
+}
+
+/* Styles for tablets (min-width: 768px) */
+@media (min-width: 768px) {
+  .heroSection {
+    padding: 80px 40px;
+    padding-bottom: 0;
+  }
+
+  .heroDescribe {
+    margin-bottom: 60px;
+  }
+
+  .heroTitle {
+    font-size: 42px;
+    margin-bottom: 24px;
+  }
+
+  .heroText {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .heroSignUp {
+    font-size: 14px;
+    padding: 10px 50px;
+  }
+
+  .metricsBlock {
+    text-align: center;
+  }
+
+  .metricsBlock:not(:last-child) {
+    padding-right: 40px;
+  }
+
+  .metricsBlock:not(:first-child) {
+    padding-left: 40px;
+  }
+
+  .metricNumbers {
+    font-size: 28px;
+  }
+
+  .metricLabel {
+    font-size: 14px;
+  }
+
+  .heroImgContainer {
+    height: 500px;
+  }
+
+  .heroImg {
+    transform: translate(-50%, -30%);
+  }
+
+  .heroImgCaption {
+    font-size: 14px;
+    padding: 12px;
+    margin-top: -155px;
+  }
+
+  .outOfFlowPublication,
+  .outOfFlowResearch {
+    font-size: 16px;
+    padding: 14px 32px;
+  }
+
+  .outOfFlowResearch {
+    top: -150px;
+  }
+
+  .outOfFlowPublication {
+    top: -50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 50px;
+  }
+
+  .heroDescribe {
+    text-align: left;
+  }
+
+  .heroTitle {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 57.6px;
+
+    padding-top: 62px;
+  }
+
+  .heroText {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+  }
+
+  .heroSignUp {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 78px;
+  }
+
+  .heroMetrics {
+    justify-content: flex-start;
+  }
+
+  .heroImgContainer {
+    padding-top: 80px;
+    align-self: flex-start;
+  }
+
+  .heroImg {
+    width: 581px;
+    height: auto;
+  }
+
+  .heroImgCaption {
+    top: -30px;
+    font-size: 20px;
+  }
+
+  .metricNumbers {
+    font-size: 44px;
+  }
+  .metricLabel {
+    font-size: 20px;
+  }
+
+  .outOfFlowPublication,
+  .outOfFlowResearch {
+    border-radius: 16px;
+  }
+
+  .outOfFlowResearch {
+    right: -50px;
+    top: -250px;
+  }
+
+  .outOfFlowPublication {
+    left: -40px;
+    top: -70px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .heroSection {
+    padding: 100px 120px;
+    gap: 100px;
+  }
+
+  .outOfFlowPublication {
+    top: -100px;
+    left: -50px;
+  }
+
+  .outOfFlowResearch {
+    top: -350px;
+    right: -50px;
+  }
+
+  .heroImgCaption {
+    margin-top: -200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .heroSection {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}

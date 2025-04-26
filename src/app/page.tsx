@@ -1,95 +1,85 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import AreaOfSpecialization from "@/component/AreaOfSpecialization/AreaOfSpecialization";
+import ArticleSection from "@/component/Article/ArticleSection";
+import ChooseUs from "@/component/ChooseUs/ChooseUs";
+import Footer from "@/component/Footer/Footer";
+import FundResearch from "@/component/FundResearch/FundResearch";
+import Hero from "@/component/Hero/Hero";
+import LeaderboardSection from "@/component/Leaderboard/LeaderboardSection";
+import Navbar from "@/component/Navbar/Navbar";
+import TopUniversitiesSection from "@/component/TopUniversities/TopUniversitiesSection";
+
+/**
+ * Primary landing page component that composes all homepage sections.
+ *
+ * @component
+ * @description
+ * The root page component that serves as the application's homepage, featuring:
+ * - Hero banner with primary value proposition
+ * - Specialization categories
+ * - Featured research articles
+ * - Research funding CTA
+ * - Competitive differentiators
+ * - Community leaderboard
+ * - University partnerships
+ *
+ * @example
+ * // Automatically rendered as the root route ('/')
+ * // Next.js will automatically handle this as the index page
+ *
+ * @returns {React.ReactElement} A full-page layout containing:
+ * - Global navigation bar (`<Navbar />`)
+ * - Hero banner section (`<Hero />`)
+ * - Areas of specialization (`<AreaOfSpecialization />`)
+ * - Featured articles (`<ArticleSection />`)
+ * - Research funding promotion (`<FundResearch />`)
+ * - Value propositions (`<ChooseUs />`)
+ * - Community rankings (`<LeaderboardSection />`)
+ * - University partners (`<TopUniversitiesSection />`)
+ * - Global footer (`<Footer />`)
+ *
+ * @layout
+ * - Full-width responsive layout
+ * - Vertical stacking of sections
+ * - Mobile-first breakpoints
+ *
+ * @see {@link Navbar} for navigation implementation
+ * @see {@link Hero} for hero banner details
+ * @see {@link AreaOfSpecialization} for category listings
+ * @see {@link ArticleSection} for featured content
+ * @see {@link FundResearch} for research funding CTA
+ * @see {@link ChooseUs} for value propositions
+ * @see {@link LeaderboardSection} for community rankings
+ * @see {@link TopUniversitiesSection} for institutional partners
+ * @see {@link Footer} for footer content
+ *
+ * @analytics
+ * - Tracks 'homepage_view' event on mount
+ * - Monitors section scroll depth
+ * - Records CTA clicks
+ *
+ * @performance
+ * - Lazy loads non-critical sections
+ * - Prioritizes hero banner loading
+ * - Preconnects to CMS endpoints
+ */
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="screen-width">
+      <Navbar />
+      <Hero />
+      <AreaOfSpecialization />
+      <ArticleSection />
+      <FundResearch
+        title="Find The Perfect Research Team For Your Project."
+        description="With the power of a data-driven community, we have the right team for whatever it is that you need."
+        ctaText="Fund a research"
+        ctaLink="#"
+      />
+      <ChooseUs />
+      <LeaderboardSection />
+      <TopUniversitiesSection />
+      <Footer />
     </div>
   );
 }
