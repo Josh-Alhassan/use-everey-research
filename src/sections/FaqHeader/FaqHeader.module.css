@@ -1,0 +1,35 @@
+.headerFaqs {
+  padding: 80px 0;
+  text-transform: uppercase;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.8px;
+
+  background-image: url("../../../public/faq-bkg.png");
+  background-size: cover;
+
+  color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+  .headerFaqs {
+    padding: 150px;
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerFaqs {
+    padding: 250px;
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .headerFaqs {
+    padding: 250px 400px;
+    /* background-color: var(--background-color-green); */
+  }
+}
